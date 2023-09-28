@@ -10,7 +10,7 @@ def update():
     text_elem = window['-text-']
     # выводим в него текст с новым числом
     text_elem.update("Your random numbers: {}".format(r))
-
+print("Hello")
 # что будет внутри окна
 # первым описываем кнопку и сразу указываем размер шрифта
 layout = [[sg.Button('Новое число',enable_events=True, key='-FUNCTION-', font='Helvetica 16')],
