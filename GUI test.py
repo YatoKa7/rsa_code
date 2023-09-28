@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 import random
-print("Hello")
+print("Hello world")
 def update():
     r = random.randint(1,10)
 
