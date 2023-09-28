@@ -1,27 +1,16 @@
 a = input("Name: ")
 b = input("Surname: ")
 
-#a = ("Harutyun")
-#b = ("Martirosyan")
-#print user
-
-print("Հարգելի գործընկերներ,\n\nԿատարված է՝")
+print("Dear Colleagues,\n\n Completed!")
 
 print('User: '+ a,b)
 
-#print Username
-
-#print(a.lower())
-
-#a = a[0]
 a = a.lower()
 b = b.lower()
 print(("Username: ")+a[0]+(".")+b)
 
 c = a[0]+(".")+b
 
-print("E-Mail: "+c+("@rtarmenia.am"))
+print("E-Mail:"+c+("@yourmaildomain"))
 
-print("Password: Aa123456")
-
-#print(a.lower())
+print("Password: Standart password ")
