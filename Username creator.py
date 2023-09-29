@@ -1,6 +1,12 @@
+import sys
 a = input("Name: ")
 b = input("Surname: ")
 
+
+with open ('write.txt', 'w') as f:
+    original_stdout = sys.stdout
+    sys.stdout = f
+    
 print("Dear Colleagues,\n\n Completed!")
 
 print('User: '+ a,b)
