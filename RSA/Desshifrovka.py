@@ -10,16 +10,6 @@ def decrypt_message(private_key, ciphertext):
     plaintext = ''.join([chr(pow(char, d, n)) for char in ciphertext])
     return plaintext
 
-# Ввод открытого ключа (e, n)
-e = int(input("Введите значение открытой экспоненты (e): "))
-n = int(input("Введите значение модуля n: "))
-public_key = (e, n)
-
-# Ввод закрытого ключа (d, n)
-d = int(input("Введите значение закрытой экспоненты (d): "))
-n = int(input("Введите значение модуля n: "))
-private_key = (d, n)
-
 while True:
     print("\nВыберите действие:")
     print("1. Зашифровать сообщение")
@@ -29,10 +19,16 @@ while True:
     choice = input("Введите номер выбранного действия: ")
 
     if choice == '1':
+        e = int(input("Введите значение открытой экспоненты (e): "))
+        n = int(input("Введите значение модуля n: "))
+        public_key = (e, n)
         message = input("Введите сообщение для шифрования: ")
         ciphertext = encrypt_message(public_key, message)
         print("Зашифрованное сообщение:", ciphertext)
     elif choice == '2':
+        d = int(input("Введите значение закрытой экспоненты (d): "))
+        n = int(input("Введите значение модуля n: "))
+        private_key = (d, n)
         ciphertext = input("Введите зашифрованное сообщение (через пробел): ").split()
         ciphertext = [int(char) for char in ciphertext]
         plaintext = decrypt_message(private_key, ciphertext)
